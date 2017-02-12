@@ -112,3 +112,273 @@ if let theURL = supportURL {
     bookDescription += "web = \(theURL)"
 }
 
+// Structure
+struct Task {
+    var title:String
+    var time:Int?
+}
+var callTask = Task(title: "Call to Randy", time: 10*60)
+var reportTask = Task(title: "Report to Boss", time: nil)
+var todayTask:[Task] = []
+todayTask += [callTask, reportTask]
+todayTask[1].time = 15*60
+callTask.title = "Call to Tady"
+print("today task = \(todayTask)")
+
+// Class
+class Employee {
+    var name : String?
+    var phoneNumber : String?
+    var boss : Employee?
+}
+struct myTask {
+    var title:String
+    var time:Int?
+    var owner : Employee
+    var participant : Employee?
+}
+let me : Employee = Employee()
+me.name = "Alex"
+me.phoneNumber = "010-9622-0213"
+let toby = Employee()
+toby.name = "Toby"
+toby.phoneNumber = "010-1234-5678"
+var mycallTask = myTask(title: "Call to Randy", time: 10*60, owner: me, participant:toby)
+print(toby.phoneNumber)
+mycallTask.participant?.phoneNumber = "010-9876-5432"
+print(toby.phoneNumber)
+
+// Enumerations
+struct newTask {
+    var title:String
+    var time:Int?
+    var owner : Employee
+    var participant : Employee?
+    var type : TaskType
+    enum TaskType {
+        case Call
+        case Report
+        case Meet
+        case Support
+        var typeTitile:String {
+            get {
+                let tiltleString:String
+                switch self {
+                case .Call:
+                    tiltleString = "Call"
+                case .Report:
+                    tiltleString = "Report"
+                case .Meet:
+                    tiltleString = "Meet"
+                case .Support:
+                    tiltleString = "Support"
+                }
+                return tiltleString
+            }
+        }
+    }
+}
+var newreportTask = newTask(title: "Report to Boss", time: nil, owner : me, participant:toby, type:newTask.TaskType.Report)
+
+// Initialize
+struct renewTask {
+    var title:String
+    var time:Int?
+    var owner : Employee
+    var participant : Employee?
+    var type : TaskType
+    enum TaskType {
+        case Call
+        case Report
+        case Meet
+        case Support
+        var typeTitile:String {
+            get {
+                let tiltleString:String
+                switch self {
+                case .Call:
+                    tiltleString = "Call"
+                case .Report:
+                    tiltleString = "Report"
+                case .Meet:
+                    tiltleString = "Meet"
+                case .Support:
+                    tiltleString = "Support"
+                }
+                return tiltleString
+            }
+        }
+    }
+    init(type:TaskType, owner:Employee) {
+        self.type = type
+        self.title = type.typeTitile
+        self.owner = owner
+        self.time = nil
+        self.participant = nil
+    }
+}
+var renewcallTask = renewTask(type: .Call, owner: me)
+renewcallTask.time = 10*60
+class renewEmployee {
+    var name : String?
+    var phoneNumber : String?
+    var boss : Employee?
+    init(name:String) {
+        self.name = name
+    }
+    convenience init(name:String, phone:String) {
+        self.init(name:name)
+        self.phoneNumber = phone
+    }
+}
+let man:renewEmployee = renewEmployee(name: "Alex", phone: "010-2222-4444")
+
+// Method
+class nowEmployee {
+    var name : String?
+    var phoneNumber : String?
+    var boss : nowEmployee?
+    init(name:String) {
+        self.name = name
+    }
+    convenience init(name:String, phone:String) {
+        self.init(name:name)
+        self.phoneNumber = phone
+    }
+    func report() {
+        if let myBoss = boss {
+            print("\(self.name) reported to \(myBoss.name)")
+        } else {
+            print("\(name) don't have boss")
+        }
+    }
+    func callTaskToBoss() -> nowTask? {
+        if let myBoss = boss, let callTo = myBoss.phoneNumber {
+            var callTask = nowTask(type: .Call, owner: self)
+            return callTask
+        }
+        return nil
+    }
+}
+struct nowTask {
+    var title:String
+    var time:Int?
+    var owner : nowEmployee
+    var participant : nowEmployee?
+    var type : TaskType
+    enum TaskType {
+        case Call
+        case Report
+        case Meet
+        case Support
+        var typeTitile:String {
+            get {
+                let tiltleString:String
+                switch self {
+                case .Call:
+                    tiltleString = "Call"
+                case .Report:
+                    tiltleString = "Report"
+                case .Meet:
+                    tiltleString = "Meet"
+                case .Support:
+                    tiltleString = "Support"
+                }
+                return tiltleString
+            }
+        }
+    }
+    init(type:TaskType, owner:nowEmployee) {
+        self.type = type
+        self.title = type.typeTitile
+        self.owner = owner
+        self.time = nil
+        self.participant = nil
+    }
+}
+let now = nowEmployee(name: "Alex", phone: "010-9999-8888")
+now.report()
+var nTask:[nowTask] = []
+var nowreportTask = nowTask(type: .Report, owner: now)
+nTask += [nowreportTask]
+if let callTask = now.callTaskToBoss() {
+    nTask += [callTask]
+}
+
+// Enum Associated Value
+class finalEmployee {
+    var name : String?
+    var phoneNumber : String?
+    var boss : nowEmployee?
+    init(name:String) {
+        self.name = name
+    }
+    convenience init(name:String, phone:String) {
+        self.init(name:name)
+        self.phoneNumber = phone
+    }
+    func report() {
+        if let myBoss = boss {
+            print("\(self.name) reported to \(myBoss.name)")
+        } else {
+            print("\(name) don't have boss")
+        }
+    }
+    func callTaskToBoss() -> finalTask? {
+        if let myBoss = boss, let callTo = myBoss.phoneNumber {
+            var callTask = finalTask(type: .Call(number: callTo), owner: self)
+            return callTask
+        }
+        return nil
+    }
+}
+struct finalTask {
+    var title:String
+    var time:Int?
+    var owner : finalEmployee
+    var type : TaskType
+    enum TaskType {
+        case Call(number:String)
+        case Report(to:finalEmployee, when:String)
+        case Meet(with:finalEmployee, location:String)
+        case Support(who:finalEmployee, Duration:Int)
+        var typeTitile:String {
+            get {
+                let tiltleString:String
+                switch self {
+                case .Call:
+                    tiltleString = "Call"
+                case .Report:
+                    tiltleString = "Report"
+                case .Meet:
+                    tiltleString = "Meet"
+                case .Support:
+                    tiltleString = "Support"
+                }
+                return tiltleString
+            }
+        }
+    }
+    init(type:TaskType, owner:finalEmployee) {
+        self.type = type
+        self.title = type.typeTitile
+        self.owner = owner
+        self.time = nil
+    }
+    func doBasicTask() -> String {
+        let finaltaskDescription:String
+        switch type {
+        case .Call(let number):
+            finaltaskDescription = "call to \(number)"
+        case .Report(let receiver, let time):
+            finaltaskDescription = "report to \(receiver) when \(time)"
+        default:
+            finaltaskDescription = "no information"
+        }
+        return finaltaskDescription
+    }
+}
+var final = finalEmployee(name: "Haha")
+var finalReport = finalTask(type: .Call(number:"000-111-2222"), owner: final)
+finalReport.doBasicTask()
+
