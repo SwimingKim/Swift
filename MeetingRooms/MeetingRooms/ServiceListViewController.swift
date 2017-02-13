@@ -23,6 +23,7 @@ class ServiceListViewController: UITableViewController {
         
         self.title = branch?.name
         self.navigationItem.title = "\(branch!.name) 정보"
+        self.navigationController?.isToolbarHidden = false;
     }
     
     override func didReceiveMemoryWarning() {
