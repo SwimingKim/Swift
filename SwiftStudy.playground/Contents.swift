@@ -382,3 +382,58 @@ var final = finalEmployee(name: "Haha")
 var finalReport = finalTask(type: .Call(number:"000-111-2222"), owner: final)
 finalReport.doBasicTask()
 
+//function
+func  addVAT(source:Double) -> Double {
+    return source*1.1
+}
+func couponDiscount(source:Double) -> Double {
+    return source*0.9
+}
+var addtional:(Double) -> Double
+let transaction032701 = 120.7
+addtional = addVAT
+let price032701 = addtional(transaction032701)
+func finalPrice(source:Double, addtional:(Double)->Double) -> Double {
+    let price = addtional(source)
+    return price
+}
+let price032702 = finalPrice(source: 350.0, addtional: couponDiscount)
+
+//closure
+let addVATClosure = { (source:Double) -> Double in
+    return source*1.1
+}
+let addVATClosure2 = { source in
+    return source*1.1
+}
+let addVATClosure3 = { source in
+    source*1.1
+}
+let addVATClosure4 = { $0*1.1 }
+let couponDiscountClousure = { $0 * 0.9 }
+let price032703 = addVATClosure4(157.6)
+let price032704 = couponDiscount(source: 200.0)
+
+//Currying
+func makeAdder (x:Int) -> (Int) -> Int {
+    func adder(a:Int) -> Int {
+        return x+a
+    }
+    return adder
+}
+func makeAdder2 (x:Int) -> (Int) -> Int {
+    let adder:(Int) -> Int = {
+        return $0 + x
+    }
+    return adder
+}
+func makeAdder3 (x:Int) -> (Int) -> Int {
+    return {
+        return $0 + x
+    }
+}
+let add5 = makeAdder(x: 5)
+let add10 = makeAdder(x: 10)
+print(add5(2))
+print(add10(2))
+print(makeAdder3(x: 5)(2))
