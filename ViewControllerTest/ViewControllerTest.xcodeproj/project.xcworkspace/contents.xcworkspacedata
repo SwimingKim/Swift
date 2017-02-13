@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MeetingRooms.xcodeproj">
+      location = "self:ViewControllerTest.xcodeproj">
    </FileRef>
 </Workspace>

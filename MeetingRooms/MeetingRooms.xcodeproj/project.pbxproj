@@ -15,6 +15,9 @@
 		2DB61A3B1E51F2BA00FA9C52 /* MeetingRoomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB61A3A1E51F2BA00FA9C52 /* MeetingRoomsTests.swift */; };
 		2DB61A461E51F2BA00FA9C52 /* MeetingRoomsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB61A451E51F2BA00FA9C52 /* MeetingRoomsUITests.swift */; };
 		2DB61A541E51F30100FA9C52 /* MeetingRoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB61A531E51F30100FA9C52 /* MeetingRoomListViewController.swift */; };
+		2DB61A7A1E520DBB00FA9C52 /* ServiceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB61A791E520DBB00FA9C52 /* ServiceListViewController.swift */; };
+		2DB61A7C1E520DCA00FA9C52 /* BranchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB61A7B1E520DCA00FA9C52 /* BranchListViewController.swift */; };
+		2DB61A7E1E520E9600FA9C52 /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB61A7D1E520E9600FA9C52 /* DataCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		2DB61A451E51F2BA00FA9C52 /* MeetingRoomsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRoomsUITests.swift; sourceTree = "<group>"; };
 		2DB61A471E51F2BA00FA9C52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DB61A531E51F30100FA9C52 /* MeetingRoomListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingRoomListViewController.swift; sourceTree = "<group>"; };
+		2DB61A791E520DBB00FA9C52 /* ServiceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceListViewController.swift; sourceTree = "<group>"; };
+		2DB61A7B1E520DCA00FA9C52 /* BranchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchListViewController.swift; sourceTree = "<group>"; };
+		2DB61A7D1E520E9600FA9C52 /* DataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				2DB61A251E51F2B900FA9C52 /* AppDelegate.swift */,
 				2DB61A271E51F2B900FA9C52 /* ViewController.swift */,
 				2DB61A291E51F2B900FA9C52 /* Main.storyboard */,
+				2DB61A791E520DBB00FA9C52 /* ServiceListViewController.swift */,
+				2DB61A7B1E520DCA00FA9C52 /* BranchListViewController.swift */,
+				2DB61A7D1E520E9600FA9C52 /* DataCenter.swift */,
 				2DB61A531E51F30100FA9C52 /* MeetingRoomListViewController.swift */,
 				2DB61A2C1E51F2B900FA9C52 /* Assets.xcassets */,
 				2DB61A2E1E51F2B900FA9C52 /* LaunchScreen.storyboard */,
@@ -262,8 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DB61A7E1E520E9600FA9C52 /* DataCenter.swift in Sources */,
 				2DB61A281E51F2B900FA9C52 /* ViewController.swift in Sources */,
 				2DB61A261E51F2B900FA9C52 /* AppDelegate.swift in Sources */,
+				2DB61A7A1E520DBB00FA9C52 /* ServiceListViewController.swift in Sources */,
+				2DB61A7C1E520DCA00FA9C52 /* BranchListViewController.swift in Sources */,
 				2DB61A541E51F30100FA9C52 /* MeetingRoomListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +521,7 @@
 				2DB61A4C1E51F2BA00FA9C52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DB61A4D1E51F2BA00FA9C52 /* Build configuration list for PBXNativeTarget "MeetingRoomsTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +530,7 @@
 				2DB61A4F1E51F2BA00FA9C52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DB61A501E51F2BA00FA9C52 /* Build configuration list for PBXNativeTarget "MeetingRoomsUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +539,7 @@
 				2DB61A521E51F2BA00FA9C52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

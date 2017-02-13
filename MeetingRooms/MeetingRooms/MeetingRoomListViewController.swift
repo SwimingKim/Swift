@@ -9,8 +9,15 @@
 import UIKit
 
 class MeetingListViewController: UITableViewController {
-    
-    var meetingRooms:[String:[String:Int]] = ["Meeting":["Bansky":4, "Rivera":8, "Kahlo":8, "Picasso":10], "Seminar":["Cezanner":20, "Matisse":30, "Renoir":40]]
+    /*
+     var meetingRooms:[String:[String:Int]] = ["Meeting":["Bansky":4, "Rivera":8, "Kahlo":8, "Picasso":10], "Seminar":["Cezanner":20, "Matisse":30, "Renoir":40]]
+     
+     func meetingRoomsAtIndex(_ index:Int) -> (key: String, value: [String:Int]) {
+     let orderedMeetingRooms = meetingRooms.sorted(by: {$0.1.first!.1 < $1.1.first!.1})
+     return orderedMeetingRooms[index]
+     }
+     */
+    var service:Service?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +26,7 @@ class MeetingListViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.title = service?.name
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,35 +36,64 @@ class MeetingListViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return meetingRooms.count
+        //        return meetingRooms.count
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let categoryValues = Array(meetingRooms.values)[section]
-        return categoryValues.count
+        //        let categoryValues = Array(meetingRooms.values)[section]
+        
+        //        let orderMeetingRooms = meetingRooms.sorted(by: { $0.1.first!.1 < $1.1.first!.1 })
+        //        let rowCount = orderMeetingRooms[section].1.count
+        
+        //        let rowCount = meetingRoomsAtIndex(section).value.count
+        //        return rowCount
+        guard let rowCount = service?.items?.count else {
+            return 0
+        }
+        return rowCount
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
         
-        let categoryValue = Array(meetingRooms.values)[indexPath.section]
+        //        let orderMeetingRooms = meetingRooms.sorted(by: { $0.1.first!.1 < $1.1.first!.1 })
         
-        let roomName = Array(categoryValue.keys)[indexPath.row]
-        let capacity = Array(categoryValue.values)[indexPath.row]
+        //        let categoryValue = Array(meetingRooms.values)[indexPath.section]
+        //        let roomName = Array(categoryValue.keys)[indexPath.row]
+        //        let capacity = Array(categoryValue.values)[indexPath.row]
         
-        cell.textLabel!.text = roomName
-        cell.detailTextLabel!.text = "\(capacity)"
+        //        let categoryValue = orderMeetingRooms[indexPath.section].1
+        //        let categoryValue = meetingRoomsAtIndex(indexPath.section).value
+        //
+        //        let orderdedCategoryValue = categoryValue.sorted(by: {$0.1<$1.1})
+        //        let roomName = orderdedCategoryValue[indexPath.row].0
+        //        let capacity = orderdedCategoryValue[indexPath.row].1
+        
+        guard let meetingRoom = service?.items?[indexPath.row] else {
+            return cell
+        }
+        
+        //        cell.textLabel!.text = roomName
+        //        cell.detailTextLabel!.text = "\(capacity)"
+        cell.textLabel!.text = meetingRoom.name
+        cell.detailTextLabel!.text = String(meetingRoom.capacity)
         
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return Array(meetingRooms.keys)[section]
-    }
-    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        let rowCount = Array(meetingRooms.values)[section].count
-        return "\(rowCount) rooms"
-    }
+    // 헤더와 풋터
+    /*
+     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+     //        return Array(meetingRooms.keys)[section]
+     return meetingRoomsAtIndex(section).key
+     }
+     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+     //        let rowCount = Array(meetingRooms.values)[section].count
+     let rowCount = meetingRoomsAtIndex(section).value.count
+     return "\(rowCount) rooms"
+     }
+     */
     
     
     /*

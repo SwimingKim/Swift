@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  MeetingRooms
+//  ViewControllerTest
 //
 //  Created by 김수영 on 2017. 2. 13..
 //  Copyright © 2017년 SuYoung. All rights reserved.
