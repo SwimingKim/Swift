@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D506CF61E539FE900BA8723 /* RoomInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D506CF51E539FE900BA8723 /* RoomInfoViewController.swift */; };
+		2D506CF81E53A91800BA8723 /* ReservationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D506CF71E53A91800BA8723 /* ReservationListViewController.swift */; };
+		2D506CFA1E53A95F00BA8723 /* ReserveRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D506CF91E53A95F00BA8723 /* ReserveRoomViewController.swift */; };
 		2DB61A261E51F2B900FA9C52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB61A251E51F2B900FA9C52 /* AppDelegate.swift */; };
 		2DB61A281E51F2B900FA9C52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB61A271E51F2B900FA9C52 /* ViewController.swift */; };
 		2DB61A2B1E51F2B900FA9C52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB61A291E51F2B900FA9C52 /* Main.storyboard */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D506CF51E539FE900BA8723 /* RoomInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomInfoViewController.swift; sourceTree = "<group>"; };
+		2D506CF71E53A91800BA8723 /* ReservationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationListViewController.swift; sourceTree = "<group>"; };
+		2D506CF91E53A95F00BA8723 /* ReserveRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReserveRoomViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		2DB61A221E51F2B900FA9C52 /* MeetingRooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetingRooms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DB61A251E51F2B900FA9C52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DB61A271E51F2B900FA9C52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +114,9 @@
 				2DB61A251E51F2B900FA9C52 /* AppDelegate.swift */,
 				2DB61A271E51F2B900FA9C52 /* ViewController.swift */,
 				2DB61A291E51F2B900FA9C52 /* Main.storyboard */,
+				2D506CF71E53A91800BA8723 /* ReservationListViewController.swift */,
+				2D506CF91E53A95F00BA8723 /* ReserveRoomViewController.swift */,
+				2D506CF51E539FE900BA8723 /* RoomInfoViewController.swift */,
 				2DB61A791E520DBB00FA9C52 /* ServiceListViewController.swift */,
 				2DB61A7B1E520DCA00FA9C52 /* BranchListViewController.swift */,
 				2DB61A7D1E520E9600FA9C52 /* DataCenter.swift */,
@@ -271,12 +280,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D506CF61E539FE900BA8723 /* RoomInfoViewController.swift in Sources */,
 				2DB61A7E1E520E9600FA9C52 /* DataCenter.swift in Sources */,
 				2DB61A281E51F2B900FA9C52 /* ViewController.swift in Sources */,
+				2D506CF81E53A91800BA8723 /* ReservationListViewController.swift in Sources */,
 				2DB61A261E51F2B900FA9C52 /* AppDelegate.swift in Sources */,
 				2DB61A7A1E520DBB00FA9C52 /* ServiceListViewController.swift in Sources */,
 				2DB61A7C1E520DCA00FA9C52 /* BranchListViewController.swift in Sources */,
 				2DB61A541E51F30100FA9C52 /* MeetingRoomListViewController.swift in Sources */,
+				2D506CFA1E53A95F00BA8723 /* ReserveRoomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

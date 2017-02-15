@@ -130,13 +130,16 @@ class MeetingListViewController: UITableViewController {
      }
      */
     
-    /*
-     // MARK: - Navigation
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    // MARK: - Navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ReservationSegue" {
+            guard let destination = segue.destination as?
+                ReservationListViewController, let seletedIndex = self.tableView.indexPathForSelectedRow?.row, let meetingRoom = service?.items?[seletedIndex]else {
+                    return
+            }
+            destination.meetingRoom = meetingRoom
+        }
+    }
     
 }

@@ -58,9 +58,26 @@ class Service {
 class MeetingRoom {
     let name : String
     let capacity : Int
-    
+    var reservaions:[Reservation]?
     init(name:String, capacity:Int) {
         self.name = name
         self.capacity = capacity
     }
+}
+
+class Reservation {
+    var hostName:String
+    var date:Date
+    var attendees:Int
+    var equipments:[String]
+    var catering:Bool
+    
+    init() {
+        self.hostName = "Host of Meeting"
+        self.date = NSDate() as Date
+        self.attendees = 1
+        self.equipments = []
+        self.catering = false
+    }
+    
 }

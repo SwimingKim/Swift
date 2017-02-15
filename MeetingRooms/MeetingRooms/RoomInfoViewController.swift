@@ -1,14 +1,14 @@
 //
-//  ServiceListViewController.swift
+//  RoomInfoViewController.swift
 //  MeetingRooms
 //
-//  Created by 김수영 on 2017. 2. 14..
+//  Created by 김수영 on 2017. 2. 15..
 //  Copyright © 2017년 SuYoung. All rights reserved.
 //
 
 import UIKit
 
-class BranchListViewController: UITableViewController {
+class RoomInfoViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,10 +18,6 @@ class BranchListViewController: UITableViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        self.navigationController?.isToolbarHidden = true
-        
-        print(NSDate() as  Date)
     }
     
     override func didReceiveMemoryWarning() {
@@ -29,37 +25,31 @@ class BranchListViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func locationTurnOn(_ sender: Any) {
-        
-        let locationAlert = UIAlertController(title: "위치정보요청", message: "위치 정보를 기반으로 가까운 지점을 자동으로 선택할 수 있습니다.", preferredStyle: UIAlertControllerStyle.actionSheet)
-        let locationAction = UIAlertAction(title: "위치정보 켜기", style: .default, handler:{(action:UIAlertAction) -> Void in print("위치정보 켜기 선택")})
-        let openMapAction = UIAlertAction(title: "지도앱에서 열기", style: .default, handler: {(action:UIAlertAction) -> Void in print("지도앱에서 열기 선택")})
-        
-        locationAlert.addAction(locationAction)
-        locationAlert.addAction(openMapAction)
-        
-        self.present( locationAlert, animated: true, completion:  nil)
+    @IBAction func modalDismiss(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
-    // MARK: - Table view data source
     
+    // MARK: - Table view data source
+    /*
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let rowCount = dataCenter.branches.count
-        return rowCount
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BranchCell", for: indexPath)
-        
-        let branch = dataCenter.branches[indexPath.row]
-        cell.textLabel?.text = branch.name
-        
-        return cell
-    }
+    */
+    /*
+     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+     
+     // Configure the cell...
+     
+     return cell
+     }
+     */
     
     /*
      // Override to support conditional editing of the table view.
@@ -96,21 +86,14 @@ class BranchListViewController: UITableViewController {
      }
      */
     
-    
+    /*
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ServiceSegue" {
-            if let destination = segue.destination as?
-                ServiceListViewController {
-                if let seletedIndex = self.tableView.indexPathForSelectedRow?.row {
-                    destination.branch = dataCenter.branches[seletedIndex] as Branch
-                }
-            }
-        }
-
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
      }
-    
+     */
     
 }
