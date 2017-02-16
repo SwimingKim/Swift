@@ -1,18 +1,19 @@
 //
-//  ReservationListViewController.swift
+//  EquipmentListViewController.swift
 //  MeetingRooms
 //
-//  Created by 김수영 on 2017. 2. 15..
+//  Created by 김수영 on 2017. 2. 16..
 //  Copyright © 2017년 SuYoung. All rights reserved.
 //
 
 import UIKit
 
-class ReservationListViewController: UITableViewController {
+let EquipmentFileName = "EquipmentDefult"
 
-    var meetingRoom:MeetingRoom?
-    var newReservation:Reservation?
+class EquipmentListViewController: UITableViewController {
     
+    var equipments:Array<AnyObject> = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,23 +22,21 @@ class ReservationListViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        guard let equipmentURL = Bundle.main.url(forResource: EquipmentFileName, withExtension: "plist") else {
+            print("No File")
+            return
+        }
+        
+        if let equipmentArray = NSArray(contentsOf: equipmentURL) {
+            print(equipmentArray)
+            equipments += Array(equipmentArray) as [AnyObject]
+        }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func addNewItem(reservation:Reservation) {
-        if (self.meetingRoom?.reservaions?.append(reservation) == nil) {
-            self.meetingRoom?.reservaions = [reservation]
-        }
-        dataCenter.save()
-        self.tableView.reloadData()
-    }
-    
-    @IBAction func unwindToReservationList(segu:UIStoryboardSegue) {
-        print("unwind")
     }
 
     // MARK: - Table view data source
@@ -48,22 +47,25 @@ class ReservationListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let rowCount = meetingRoom?.reservaions?.count else {
-            return 0
-        }
-        return rowCount
+        // #warning Incomplete implementation, return the number of rows
+        return equipments.count
     }
 
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReservationCell", for: indexPath)
-        
-        guard let reservation = meetingRoom?.reservaions?[indexPath.row] else {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EquipmentCell", for: indexPath)
+
+        guard let equipment = equipments[indexPath.row] as? [String:AnyObject] else {
             return cell
         }
         
-        cell.textLabel?.text = reservation.date.description
-        cell.detailTextLabel?.text = reservation.hostName
+        if let name = equipment["name"] as? String {
+            cell.textLabel?.text = name
+        }
+        
+        if let amount = equipment["amount"] as? Int {
+            cell.detailTextLabel?.text = String(amount)
+        }
 
         return cell
     }

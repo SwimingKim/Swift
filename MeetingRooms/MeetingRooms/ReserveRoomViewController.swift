@@ -42,7 +42,7 @@ class ReserveRoomViewController: UITableViewController {
             return nil
         }
         reservation.hostName = host
-        reservation.date = dataPicker.date
+        reservation.date = dataPicker.date as NSDate
         if let equipmentArray = equipmentField.text?.characters.split(separator: ",").map(String.init) {
             reservation.equipments = equipmentArray
         }
