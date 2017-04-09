@@ -51,9 +51,7 @@ while true {
 repeat {
 
 }
-while true {
-
-}
+while true
 ```
 
 - 집단 자료형
