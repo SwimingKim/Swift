@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D05D4591EE2588900D4971B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05D4581EE2588900D4971B /* AppDelegate.swift */; };
+		2D05D45B1EE2588900D4971B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05D45A1EE2588900D4971B /* ViewController.swift */; };
+		2D05D45E1EE2588900D4971B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D05D45C1EE2588900D4971B /* Main.storyboard */; };
+		2D05D4601EE2588900D4971B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D05D45F1EE2588900D4971B /* Assets.xcassets */; };
+		2D05D4631EE2588900D4971B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D05D4611EE2588900D4971B /* LaunchScreen.storyboard */; };
+		2D05D46E1EE2588A00D4971B /* LottoDrawExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05D46D1EE2588A00D4971B /* LottoDrawExampleTests.swift */; };
+		2D3D38881EE57BAC00EE8645 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3D387E1EE57BAC00EE8645 /* FMDatabase.m */; };
+		2D3D38891EE57BAC00EE8645 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3D38801EE57BAC00EE8645 /* FMDatabaseAdditions.m */; };
+		2D3D388A1EE57BAC00EE8645 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3D38821EE57BAC00EE8645 /* FMDatabasePool.m */; };
+		2D3D388B1EE57BAC00EE8645 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3D38841EE57BAC00EE8645 /* FMDatabaseQueue.m */; };
+		2D3D388C1EE57BAC00EE8645 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3D38871EE57BAC00EE8645 /* FMResultSet.m */; };
+		2D3D388D1EE57BCE00EE8645 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D00DD221EE26BAD000B3FFF /* libsqlite3.tbd */; };
+		2DB290B21EE25CA900113F13 /* LottoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB290B11EE25CA900113F13 /* LottoCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D05D46A1EE2588A00D4971B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D05D44D1EE2588900D4971B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D05D4541EE2588900D4971B;
+			remoteInfo = LottoDrawExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D00DD101EE26B87000B3FFF /* LottoDrawExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LottoDrawExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		2D00DD221EE26BAD000B3FFF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2D05D4551EE2588900D4971B /* LottoDrawExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LottoDrawExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D05D4581EE2588900D4971B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2D05D45A1EE2588900D4971B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2D05D45D1EE2588900D4971B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2D05D45F1EE2588900D4971B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D05D4621EE2588900D4971B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2D05D4641EE2588900D4971B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D05D4691EE2588A00D4971B /* LottoDrawExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LottoDrawExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D05D46D1EE2588A00D4971B /* LottoDrawExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoDrawExampleTests.swift; sourceTree = "<group>"; };
+		2D05D46F1EE2588A00D4971B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D3D387D1EE57BAC00EE8645 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		2D3D387E1EE57BAC00EE8645 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		2D3D387F1EE57BAC00EE8645 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		2D3D38801EE57BAC00EE8645 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		2D3D38811EE57BAC00EE8645 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		2D3D38821EE57BAC00EE8645 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		2D3D38831EE57BAC00EE8645 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		2D3D38841EE57BAC00EE8645 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		2D3D38851EE57BAC00EE8645 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		2D3D38861EE57BAC00EE8645 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		2D3D38871EE57BAC00EE8645 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		2DB290B11EE25CA900113F13 /* LottoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottoCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D05D4661EE2588A00D4971B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D3D387C1EE57B5C00EE8645 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D3D388D1EE57BCE00EE8645 /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D00DD211EE26BAD000B3FFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D00DD221EE26BAD000B3FFF /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D05D44C1EE2588900D4971B = {
+			isa = PBXGroup;
+			children = (
+				2D05D4571EE2588900D4971B /* LottoDrawExample */,
+				2D05D46C1EE2588A00D4971B /* LottoDrawExampleTests */,
+				2D05D4561EE2588900D4971B /* Products */,
+				2D00DD211EE26BAD000B3FFF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2D05D4561EE2588900D4971B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D05D4551EE2588900D4971B /* LottoDrawExample.app */,
+				2D05D4691EE2588A00D4971B /* LottoDrawExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D05D4571EE2588900D4971B /* LottoDrawExample */ = {
+			isa = PBXGroup;
+			children = (
+				2D05D4581EE2588900D4971B /* AppDelegate.swift */,
+				2D05D45A1EE2588900D4971B /* ViewController.swift */,
+				2D05D45C1EE2588900D4971B /* Main.storyboard */,
+				2D05D45F1EE2588900D4971B /* Assets.xcassets */,
+				2D05D4611EE2588900D4971B /* LaunchScreen.storyboard */,
+				2D05D4641EE2588900D4971B /* Info.plist */,
+				2DB290B11EE25CA900113F13 /* LottoCell.swift */,
+				2D00DD101EE26B87000B3FFF /* LottoDrawExample-Bridging-Header.h */,
+				2D3D387D1EE57BAC00EE8645 /* FMDatabase.h */,
+				2D3D387E1EE57BAC00EE8645 /* FMDatabase.m */,
+				2D3D387F1EE57BAC00EE8645 /* FMDatabaseAdditions.h */,
+				2D3D38801EE57BAC00EE8645 /* FMDatabaseAdditions.m */,
+				2D3D38811EE57BAC00EE8645 /* FMDatabasePool.h */,
+				2D3D38821EE57BAC00EE8645 /* FMDatabasePool.m */,
+				2D3D38831EE57BAC00EE8645 /* FMDatabaseQueue.h */,
+				2D3D38841EE57BAC00EE8645 /* FMDatabaseQueue.m */,
+				2D3D38851EE57BAC00EE8645 /* FMDB.h */,
+				2D3D38861EE57BAC00EE8645 /* FMResultSet.h */,
+				2D3D38871EE57BAC00EE8645 /* FMResultSet.m */,
+			);
+			path = LottoDrawExample;
+			sourceTree = "<group>";
+		};
+		2D05D46C1EE2588A00D4971B /* LottoDrawExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				2D05D46D1EE2588A00D4971B /* LottoDrawExampleTests.swift */,
+				2D05D46F1EE2588A00D4971B /* Info.plist */,
+			);
+			path = LottoDrawExampleTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D05D4541EE2588900D4971B /* LottoDrawExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D05D4721EE2588A00D4971B /* Build configuration list for PBXNativeTarget "LottoDrawExample" */;
+			buildPhases = (
+				2D05D4511EE2588900D4971B /* Sources */,
+				2D05D4531EE2588900D4971B /* Resources */,
+				2D3D387C1EE57B5C00EE8645 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LottoDrawExample;
+			productName = LottoDrawExample;
+			productReference = 2D05D4551EE2588900D4971B /* LottoDrawExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D05D4681EE2588A00D4971B /* LottoDrawExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D05D4751EE2588A00D4971B /* Build configuration list for PBXNativeTarget "LottoDrawExampleTests" */;
+			buildPhases = (
+				2D05D4651EE2588A00D4971B /* Sources */,
+				2D05D4661EE2588A00D4971B /* Frameworks */,
+				2D05D4671EE2588A00D4971B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D05D46B1EE2588A00D4971B /* PBXTargetDependency */,
+			);
+			name = LottoDrawExampleTests;
+			productName = LottoDrawExampleTests;
+			productReference = 2D05D4691EE2588A00D4971B /* LottoDrawExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D05D44D1EE2588900D4971B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "김수영";
+				TargetAttributes = {
+					2D05D4541EE2588900D4971B = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5JVHC5M949;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					2D05D4681EE2588A00D4971B = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5JVHC5M949;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2D05D4541EE2588900D4971B;
+					};
+				};
+			};
+			buildConfigurationList = 2D05D4501EE2588900D4971B /* Build configuration list for PBXProject "LottoDrawExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D05D44C1EE2588900D4971B;
+			productRefGroup = 2D05D4561EE2588900D4971B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D05D4541EE2588900D4971B /* LottoDrawExample */,
+				2D05D4681EE2588A00D4971B /* LottoDrawExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D05D4531EE2588900D4971B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D05D4631EE2588900D4971B /* LaunchScreen.storyboard in Resources */,
+				2D05D4601EE2588900D4971B /* Assets.xcassets in Resources */,
+				2D05D45E1EE2588900D4971B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D05D4671EE2588A00D4971B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D05D4511EE2588900D4971B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D05D45B1EE2588900D4971B /* ViewController.swift in Sources */,
+				2D3D388A1EE57BAC00EE8645 /* FMDatabasePool.m in Sources */,
+				2DB290B21EE25CA900113F13 /* LottoCell.swift in Sources */,
+				2D3D388B1EE57BAC00EE8645 /* FMDatabaseQueue.m in Sources */,
+				2D05D4591EE2588900D4971B /* AppDelegate.swift in Sources */,
+				2D3D38881EE57BAC00EE8645 /* FMDatabase.m in Sources */,
+				2D3D388C1EE57BAC00EE8645 /* FMResultSet.m in Sources */,
+				2D3D38891EE57BAC00EE8645 /* FMDatabaseAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D05D4651EE2588A00D4971B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D05D46E1EE2588A00D4971B /* LottoDrawExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D05D46B1EE2588A00D4971B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D05D4541EE2588900D4971B /* LottoDrawExample */;
+			targetProxy = 2D05D46A1EE2588A00D4971B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2D05D45C1EE2588900D4971B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D05D45D1EE2588900D4971B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2D05D4611EE2588900D4971B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D05D4621EE2588900D4971B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D05D4701EE2588A00D4971B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2D05D4711EE2588A00D4971B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D05D4731EE2588A00D4971B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 5JVHC5M949;
+				INFOPLIST_FILE = LottoDrawExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = devsu.LottoDrawExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LottoDrawExample/LottoDrawExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2D05D4741EE2588A00D4971B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 5JVHC5M949;
+				INFOPLIST_FILE = LottoDrawExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = devsu.LottoDrawExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LottoDrawExample/LottoDrawExample-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2D05D4761EE2588A00D4971B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5JVHC5M949;
+				INFOPLIST_FILE = LottoDrawExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = devsu.LottoDrawExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LottoDrawExample.app/LottoDrawExample";
+			};
+			name = Debug;
+		};
+		2D05D4771EE2588A00D4971B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5JVHC5M949;
+				INFOPLIST_FILE = LottoDrawExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = devsu.LottoDrawExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LottoDrawExample.app/LottoDrawExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D05D4501EE2588900D4971B /* Build configuration list for PBXProject "LottoDrawExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D05D4701EE2588A00D4971B /* Debug */,
+				2D05D4711EE2588A00D4971B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D05D4721EE2588A00D4971B /* Build configuration list for PBXNativeTarget "LottoDrawExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D05D4731EE2588A00D4971B /* Debug */,
+				2D05D4741EE2588A00D4971B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D05D4751EE2588A00D4971B /* Build configuration list for PBXNativeTarget "LottoDrawExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D05D4761EE2588A00D4971B /* Debug */,
+				2D05D4771EE2588A00D4971B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D05D44D1EE2588900D4971B /* Project object */;
+}
