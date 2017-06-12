@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="u0C-xZ-9NR">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Clock-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalligraphyClockExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,6 +100,13 @@
                             <constraint firstItem="mhX-q5-Wws" firstAttribute="height" secondItem="YkQ-5q-saE" secondAttribute="height" id="yFd-kA-Pd1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Clock" id="Zjt-gs-y18">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="FfV-0M-FMX">
+                            <connections>
+                                <segue destination="koo-DE-bog" kind="show" id="YGQ-yF-2HD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="fullDisplay" destination="Yh5-Ux-lxb" id="w0w-is-X0G"/>
                         <outlet property="h1" destination="YkQ-5q-saE" id="MTx-6w-neg"/>
@@ -117,7 +124,89 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.39130434782609" y="124"/>
+            <point key="canvasLocation" x="908.09595202398805" y="124"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="D9x-CY-3UK">
+            <objects>
+                <tableViewController id="koo-DE-bog" customClass="SettingsViewController" customModule="CalligraphyClockExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="WNv-8m-Fjl">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection headerTitle="Settings" id="h3S-MX-WK3">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="cxf-ZA-2S0">
+                                        <rect key="frame" x="0.0" y="28" width="667" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxf-ZA-2S0" id="lhL-Y1-1p7">
+                                            <rect key="frame" x="0.0" y="0.0" width="667" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alarm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQD-Ga-YSw">
+                                                    <rect key="frame" x="10" y="10" width="45" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JBY-lJ-AMp">
+                                                    <rect key="frame" x="608" y="10" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JBY-lJ-AMp" firstAttribute="top" secondItem="lhL-Y1-1p7" secondAttribute="top" constant="10" id="0Xe-qR-hll"/>
+                                                <constraint firstItem="fQD-Ga-YSw" firstAttribute="leading" secondItem="lhL-Y1-1p7" secondAttribute="leading" constant="10" id="ATb-qU-PN1"/>
+                                                <constraint firstItem="fQD-Ga-YSw" firstAttribute="top" secondItem="lhL-Y1-1p7" secondAttribute="top" constant="10" id="mfZ-Ps-qzX"/>
+                                                <constraint firstAttribute="trailing" secondItem="JBY-lJ-AMp" secondAttribute="trailing" constant="10" id="qJX-43-FWa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="ky3-3W-grj">
+                                        <rect key="frame" x="0.0" y="108" width="667" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ky3-3W-grj" id="VQ8-4J-gJw">
+                                            <rect key="frame" x="0.0" y="0.0" width="667" height="199.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbJ-BV-z4o">
+                                                    <rect key="frame" x="18" y="18" width="38" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tT7-5G-7yu">
+                                                    <rect key="frame" x="173.5" y="-8.5" width="320" height="216.5"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="518956886.27080601">
+                                                        <!--2017-06-12 10:41:26 +0000-->
+                                                    </date>
+                                                </datePicker>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tT7-5G-7yu" firstAttribute="centerY" secondItem="VQ8-4J-gJw" secondAttribute="centerY" id="3Us-rd-xvY"/>
+                                                <constraint firstItem="tT7-5G-7yu" firstAttribute="centerX" secondItem="VQ8-4J-gJw" secondAttribute="centerX" id="3us-xq-1ey"/>
+                                                <constraint firstItem="CbJ-BV-z4o" firstAttribute="leading" secondItem="VQ8-4J-gJw" secondAttribute="leadingMargin" constant="10" id="GHW-9s-Pqk"/>
+                                                <constraint firstItem="CbJ-BV-z4o" firstAttribute="top" secondItem="VQ8-4J-gJw" secondAttribute="topMargin" constant="10" id="cZm-E5-ma7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="koo-DE-bog" id="GJd-0T-NvH"/>
+                            <outlet property="delegate" destination="koo-DE-bog" id="Qab-BY-PVk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Hsn-hh-LnC"/>
+                    <connections>
+                        <outlet property="alarmSwitch" destination="JBY-lJ-AMp" id="X9I-JY-DRs"/>
+                        <outlet property="datePicker" destination="tT7-5G-7yu" id="zF3-UI-vzD"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3D4-cI-kOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1603.4482758620691" y="124"/>
         </scene>
         <!--Text View Controller-->
         <scene sceneID="332-xj-Fj3">
@@ -273,6 +362,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RK1-g8-9Bp" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117" y="-759"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ycQ-BK-1WY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnTap="YES" id="u0C-xZ-9NR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cgo-EK-tWg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="f1v-DN-mcZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDk-Ew-gBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.39130434782609" y="124"/>
         </scene>
     </scenes>
 </document>

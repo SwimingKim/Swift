@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D712D471EEEA98A00F7F7C1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D712D461EEEA98A00F7F7C1 /* SettingsViewController.swift */; };
 		2DB3AE4F1EEB842B00A9B4AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB3AE4E1EEB842B00A9B4AE /* AppDelegate.swift */; };
 		2DB3AE511EEB842B00A9B4AE /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB3AE501EEB842B00A9B4AE /* TextViewController.swift */; };
 		2DB3AE541EEB842B00A9B4AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB3AE521EEB842B00A9B4AE /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D712D461EEEA98A00F7F7C1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2DB3AE4B1EEB842B00A9B4AE /* CalligraphyClockExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalligraphyClockExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DB3AE4E1EEB842B00A9B4AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DB3AE501EEB842B00A9B4AE /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				2DB3AE701EEB95C900A9B4AE /* Supporting Files */,
 				2DB3AE4E1EEB842B00A9B4AE /* AppDelegate.swift */,
 				2DB3AE6E1EEB92BF00A9B4AE /* ViewController.swift */,
+				2D712D461EEEA98A00F7F7C1 /* SettingsViewController.swift */,
 				2DB3AE501EEB842B00A9B4AE /* TextViewController.swift */,
 				2DB3AE521EEB842B00A9B4AE /* Main.storyboard */,
 				2DB3AE551EEB842B00A9B4AE /* Assets.xcassets */,
@@ -319,6 +322,7 @@
 				2DB3AE6F1EEB92BF00A9B4AE /* ViewController.swift in Sources */,
 				2DB3AE511EEB842B00A9B4AE /* TextViewController.swift in Sources */,
 				2DB3AE4F1EEB842B00A9B4AE /* AppDelegate.swift in Sources */,
+				2D712D471EEEA98A00F7F7C1 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +534,7 @@
 				2DB3AE6A1EEB842C00A9B4AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DB3AE6B1EEB842C00A9B4AE /* Build configuration list for PBXNativeTarget "CalligraphyClockExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +543,7 @@
 				2DB3AE6D1EEB842C00A9B4AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
