@@ -4,7 +4,7 @@
 
 - 자료형
 
-```
+```swift
 Int, Double&Float
 Bool
 String, Character
@@ -12,7 +12,7 @@ String, Character
 
 - 조건문
 
-```
+```swift
 if true {
 
 } else if false {
@@ -39,7 +39,7 @@ switch val {
 
 - 반복문
 
-```
+```swift
 for row in 1...2 {
   print("\(i)입니다")
 }
@@ -56,7 +56,7 @@ while true
 
 - 집단 자료형
 
-```
+```swift
 배열 = Array<String>, [String]
 세트 = Set<String>(), Set
 튜플 = (String, Int)
@@ -65,7 +65,7 @@ while true
 
 - 옵셔널
 
-```
+```swift
 var temp : Int? = Int("123")
 print(temp!)
 
@@ -75,7 +75,7 @@ print(temp)
 
 - 함수
 
-```
+```swift
 func printHello(name : String, _ msg : String, newline : Bool = true) {
   var name = name
   name = name + "님"
@@ -89,7 +89,7 @@ print(count)
 
 - 클로저 (자바의 람다)
 
-```
+```swift
 { () -> () in
   print("클로저가 실행됩니다")
 }
@@ -97,7 +97,7 @@ print(count)
 
 - 구조체(값복사), 클래스(참조복사)
 
-```
+```swift
 struct Resolution {
 
 }
@@ -113,7 +113,7 @@ class VideoMode {
 
 - 프로퍼티
 
-```
+```swift
 1. 저장 프로퍼티
 class User {
   var name : String = ""
@@ -149,7 +149,7 @@ Foo.sFoo = "새로운 값"
 
 - 상속
 
-```
+```swift
 class Car : Vehicle {
 
   var engineLevel = 0
