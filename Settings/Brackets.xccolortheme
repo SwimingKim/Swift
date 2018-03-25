@@ -93,31 +93,31 @@
 		<key>xcode.syntax.comment.doc.keyword</key>
 		<string>0.501961 0.501961 0.501961 1</string>
 		<key>xcode.syntax.identifier.class</key>
-		<string>0.35306 0.53587 0.964159 1</string>
-		<key>xcode.syntax.identifier.class.system</key>
-		<string>0.423529 0.619608 0.972549 1</string>
-		<key>xcode.syntax.identifier.constant</key>
-		<string>0.35306 0.53587 0.964159 1</string>
-		<key>xcode.syntax.identifier.constant.system</key>
-		<string>0.35306 0.53587 0.964159 1</string>
-		<key>xcode.syntax.identifier.function</key>
 		<string>0.654207 0.397486 0.824919 1</string>
+		<key>xcode.syntax.identifier.class.system</key>
+		<string>0.654207 0.397486 0.824919 1</string>
+		<key>xcode.syntax.identifier.constant</key>
+		<string>1 1 1 1</string>
+		<key>xcode.syntax.identifier.constant.system</key>
+		<string>1 1 1 1</string>
+		<key>xcode.syntax.identifier.function</key>
+		<string>0.352941 0.537255 0.964706 1</string>
 		<key>xcode.syntax.identifier.function.system</key>
-		<string>0.35306 0.53587 0.964159 1</string>
+		<string>0.285174 0.442119 0.954239 1</string>
 		<key>xcode.syntax.identifier.macro</key>
-		<string>0.717647 0.498039 0.858824 1</string>
+		<string>0.654902 0.396078 0.823529 1</string>
 		<key>xcode.syntax.identifier.macro.system</key>
-		<string>0.717647 0.498039 0.858824 1</string>
+		<string>0.654902 0.396078 0.823529 1</string>
 		<key>xcode.syntax.identifier.type</key>
-		<string>0.35306 0.53587 0.964159 1</string>
+		<string>0.654902 0.396078 0.823529 1</string>
 		<key>xcode.syntax.identifier.type.system</key>
-		<string>0.423529 0.619608 0.972549 1</string>
+		<string>0.654902 0.396078 0.823529 1</string>
 		<key>xcode.syntax.identifier.variable</key>
-		<string>0.35306 0.53587 0.964159 1</string>
+		<string>1 1 1 1</string>
 		<key>xcode.syntax.identifier.variable.system</key>
-		<string>0.423529 0.619608 0.972549 1</string>
+		<string>0.999999 0.999974 0.999991 1</string>
 		<key>xcode.syntax.keyword</key>
-		<string>0.423529 0.619608 0.972549 1</string>
+		<string>0.352941 0.537255 0.964706 1</string>
 		<key>xcode.syntax.number</key>
 		<string>0.451144 0.58538 0.0154478 1</string>
 		<key>xcode.syntax.plain</key>
