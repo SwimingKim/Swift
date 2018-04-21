@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b0n-jM-tRd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Proj02_SignUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJV-4t-ePd">
+                                <rect key="frame" x="16" y="90" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Push"/>
+                                <connections>
+                                    <segue destination="fsz-3l-ctl" kind="show" id="BcT-oG-sIN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fwu-hH-cvi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="37.331334332833585"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="hEK-SM-Svu">
+            <objects>
+                <viewController id="fsz-3l-ctl" customClass="SecondViewController" customModule="Proj02_SignUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A7G-7o-OM6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbA-IU-JU5">
+                                <rect key="frame" x="16" y="93" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pop"/>
+                                <connections>
+                                    <action selector="popToPrev:" destination="fsz-3l-ctl" eventType="touchUpInside" id="WXv-vx-TNI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Rbl-cZ-bYy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X9n-1w-Yr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1807.2" y="36.431784107946029"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QHY-ZC-a8H">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q9D-Fi-xYK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gSZ-1h-g9Z">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HcG-AS-RnF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sq2-jb-mdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228" y="36"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zX1-iN-gxs">
+            <objects>
+                <viewController id="Dai-aI-qPr" customClass="ViewController" customModule="Proj02_SignUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cnx-QG-jGa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1n-v0-PIW">
+                                <rect key="frame" x="30" y="47" width="99" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Present Modal"/>
+                                <connections>
+                                    <segue destination="u9W-cf-gGF" kind="presentation" id="HEA-jw-5GT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CIe-h0-NNg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FkN-Db-iEJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="418" y="745"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="sX4-52-mrs">
+            <objects>
+                <viewController id="b0n-jM-tRd" customClass="ImageViewController" customModule="Proj02_SignUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NGR-v2-oHz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j1G-w5-QRC">
+                                <rect key="frame" x="20" y="40" width="335" height="557"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsw-z6-PZ5">
+                                <rect key="frame" x="20" y="617" width="335" height="30"/>
+                                <state key="normal" title="사진 선택하기"/>
+                                <connections>
+                                    <action selector="touchUpSelecteImageButton:" destination="b0n-jM-tRd" eventType="touchUpInside" id="53U-pE-tAh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j1G-w5-QRC" firstAttribute="top" secondItem="AIk-vu-PfF" secondAttribute="top" constant="20" id="1kU-fO-ib6"/>
+                            <constraint firstItem="tsw-z6-PZ5" firstAttribute="top" secondItem="j1G-w5-QRC" secondAttribute="bottom" constant="20" id="FVT-w4-msb"/>
+                            <constraint firstItem="j1G-w5-QRC" firstAttribute="leading" secondItem="AIk-vu-PfF" secondAttribute="leading" constant="20" id="J1N-W0-5km"/>
+                            <constraint firstItem="AIk-vu-PfF" firstAttribute="bottom" secondItem="tsw-z6-PZ5" secondAttribute="bottom" constant="20" id="LAf-dn-Asd"/>
+                            <constraint firstItem="AIk-vu-PfF" firstAttribute="trailing" secondItem="j1G-w5-QRC" secondAttribute="trailing" constant="20" id="RgS-TW-zBl"/>
+                            <constraint firstItem="tsw-z6-PZ5" firstAttribute="leading" secondItem="AIk-vu-PfF" secondAttribute="leading" constant="20" id="g2r-aX-QCL"/>
+                            <constraint firstItem="AIk-vu-PfF" firstAttribute="trailing" secondItem="tsw-z6-PZ5" secondAttribute="trailing" constant="20" id="pQv-sf-vFk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AIk-vu-PfF"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="j1G-w5-QRC" id="qTA-D7-MA7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FSR-pb-iNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="1509"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="YV7-MF-ex1">
+            <objects>
+                <viewController id="u9W-cf-gGF" customClass="SecondViewController" customModule="Proj02_SignUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ch1-k3-XTN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcB-h5-Hxs">
+                                <rect key="frame" x="16" y="46" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dismiss Modal"/>
+                                <connections>
+                                    <action selector="dismissModa:" destination="u9W-cf-gGF" eventType="touchUpInside" id="X2y-Sj-Uwv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="caf-gj-OVD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7pe-Tr-atf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143" y="744"/>
+        </scene>
+    </scenes>
+</document>
