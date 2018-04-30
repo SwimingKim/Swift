@@ -9,6 +9,9 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    @IBOutlet weak var nameLable: UILabel!
+    @IBOutlet weak var ageLable: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +21,9 @@ class SecondViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.nameLable.text = UserInfomation.shared.name
+        self.ageLable.text = UserInfomation.shared.age
         
         print("SecondViewController의 view가 화면에 보여질 예정")
     }

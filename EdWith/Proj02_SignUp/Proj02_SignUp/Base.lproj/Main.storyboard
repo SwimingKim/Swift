@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b0n-jM-tRd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dpz-DD-VYS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,19 +18,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJV-4t-ePd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJV-4t-ePd">
                                 <rect key="frame" x="16" y="90" width="35" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Push"/>
                                 <connections>
                                     <segue destination="fsz-3l-ctl" kind="show" id="BcT-oG-sIN"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tvm-hh-8pZ">
+                                <rect key="frame" x="16" y="140" width="343" height="70"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름을 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KxU-mC-TyG">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="나이를 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6LQ-S6-9o1">
+                                        <rect key="frame" x="0.0" y="40" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYo-Ux-SLt">
+                                <rect key="frame" x="151" y="90" width="208" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Set Data to Singleton Instance"/>
+                                <connections>
+                                    <action selector="touchUpSetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tSW-8n-ho8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tvm-hh-8pZ" firstAttribute="top" secondItem="TJV-4t-ePd" secondAttribute="bottom" constant="20" id="9UH-DR-lUT"/>
+                            <constraint firstItem="tvm-hh-8pZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EcP-lB-tpD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tvm-hh-8pZ" secondAttribute="trailing" constant="16" id="HQu-jD-OYj"/>
+                            <constraint firstItem="TJV-4t-ePd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HmX-5T-Uz0"/>
+                            <constraint firstItem="TJV-4t-ePd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="LnT-kL-5OF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Fwu-hH-cvi"/>
+                    <connections>
+                        <outlet property="ageField" destination="6LQ-S6-9o1" id="bvN-Lj-y01"/>
+                        <outlet property="nameField" destination="KxU-mC-TyG" id="KfE-UT-mDf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,10 +87,28 @@
                                     <action selector="popToPrev:" destination="fsz-3l-ctl" eventType="touchUpInside" id="WXv-vx-TNI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKp-MM-Yis">
+                                <rect key="frame" x="16" y="142" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOY-FF-aye">
+                                <rect key="frame" x="16" y="182" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Rbl-cZ-bYy"/>
                     </view>
+                    <connections>
+                        <outlet property="ageLable" destination="sOY-FF-aye" id="89P-cH-8MK"/>
+                        <outlet property="nameLable" destination="cKp-MM-Yis" id="kdi-Xv-acR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X9n-1w-Yr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,6 +195,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSR-pb-iNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="356" y="1509"/>
+        </scene>
+        <!--Date View Controller-->
+        <scene sceneID="K6B-Yi-WrP">
+            <objects>
+                <viewController id="BH8-1J-xu8" customClass="DateViewController" customModule="Proj02_SignUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Ts-MA-36y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wCo-Dp-3cF">
+                                <rect key="frame" x="0.0" y="40" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="546798592.92511702">
+                                    <!--2018-04-30 16:29:52 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veX-Om-KnI">
+                                <rect key="frame" x="16" y="276" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wCo-Dp-3cF" firstAttribute="top" secondItem="bZO-54-DrG" secondAttribute="top" constant="20" id="0sK-n0-uJP"/>
+                            <constraint firstAttribute="trailing" secondItem="wCo-Dp-3cF" secondAttribute="trailing" id="2kC-db-x2E"/>
+                            <constraint firstItem="veX-Om-KnI" firstAttribute="leading" secondItem="bZO-54-DrG" secondAttribute="leading" constant="16" id="P6n-hy-xia"/>
+                            <constraint firstItem="bZO-54-DrG" firstAttribute="trailing" secondItem="veX-Om-KnI" secondAttribute="trailing" constant="16" id="WVr-yy-rP8"/>
+                            <constraint firstItem="wCo-Dp-3cF" firstAttribute="leading" secondItem="bZO-54-DrG" secondAttribute="leading" id="Y2r-KV-V2X"/>
+                            <constraint firstItem="veX-Om-KnI" firstAttribute="top" secondItem="wCo-Dp-3cF" secondAttribute="bottom" constant="20" id="o0M-hE-ILo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bZO-54-DrG"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="veX-Om-KnI" id="dp4-aj-xyQ"/>
+                        <outlet property="datePicker" destination="wCo-Dp-3cF" id="UVg-zA-QnA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hpC-pl-3NF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="2189"/>
+        </scene>
+        <!--Gesture View Controller-->
+        <scene sceneID="qGD-jq-IWv">
+            <objects>
+                <viewController id="b1m-KG-ZRb" customClass="GestureViewController" customModule="Proj02_SignUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V7e-FB-nlG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="YBO-aR-Q7m"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GGH-xa-wXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350" y="2907"/>
+        </scene>
+        <!--Tap Gesture View Controller-->
+        <scene sceneID="34Z-6N-SlT">
+            <objects>
+                <viewController id="dpz-DD-VYS" customClass="TapGestureViewController" customModule="Proj02_SignUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1o6-3T-qAU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mqx-IG-aA9">
+                                <rect key="frame" x="16" y="47" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="Wv2-Lp-45f"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8lb-oL-oAE" appends="YES" id="MD2-PW-YB3"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DF8-Nz-liB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8lb-oL-oAE"/>
+            </objects>
+            <point key="canvasLocation" x="349.60000000000002" y="3603.1484257871066"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="YV7-MF-ex1">

@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var ageField: UITextField!
+    
+    @IBAction func touchUpSetButton(_ sender: UIButton) {
+        UserInfomation.shared.name = nameField.text
+        UserInfomation.shared.age = ageField.text
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -14,6 +14,10 @@
 		2D974D3E2089C9C300046EF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D974D3C2089C9C300046EF6 /* LaunchScreen.storyboard */; };
 		2D974D462089CA4800046EF6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D974D452089CA4800046EF6 /* SecondViewController.swift */; };
 		2D974D482089D4DB00046EF6 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D974D472089D4DB00046EF6 /* ImageViewController.swift */; };
+		2DA336A92097810F00C2EDC2 /* TapGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA336A82097810F00C2EDC2 /* TapGestureViewController.swift */; };
+		2DD6BC972097796600EF0F8A /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6BC962097796600EF0F8A /* UserInformation.swift */; };
+		2DD6BC9920977C4400EF0F8A /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6BC9820977C4400EF0F8A /* DateViewController.swift */; };
+		2DD6BC9B20977EDA00EF0F8A /* GestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6BC9A20977EDA00EF0F8A /* GestureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		2D974D3F2089C9C300046EF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D974D452089CA4800046EF6 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2D974D472089D4DB00046EF6 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		2DA336A82097810F00C2EDC2 /* TapGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureViewController.swift; sourceTree = "<group>"; };
+		2DD6BC962097796600EF0F8A /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
+		2DD6BC9820977C4400EF0F8A /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		2DD6BC9A20977EDA00EF0F8A /* GestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,10 @@
 				2D974D332089C9C200046EF6 /* AppDelegate.swift */,
 				2D974D352089C9C200046EF6 /* ViewController.swift */,
 				2D974D372089C9C200046EF6 /* Main.storyboard */,
+				2DD6BC962097796600EF0F8A /* UserInformation.swift */,
+				2DD6BC9820977C4400EF0F8A /* DateViewController.swift */,
+				2DD6BC9A20977EDA00EF0F8A /* GestureViewController.swift */,
+				2DA336A82097810F00C2EDC2 /* TapGestureViewController.swift */,
 				2D974D3A2089C9C300046EF6 /* Assets.xcassets */,
 				2D974D3C2089C9C300046EF6 /* LaunchScreen.storyboard */,
 				2D974D3F2089C9C300046EF6 /* Info.plist */,
@@ -141,9 +153,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD6BC9B20977EDA00EF0F8A /* GestureViewController.swift in Sources */,
+				2DD6BC972097796600EF0F8A /* UserInformation.swift in Sources */,
 				2D974D462089CA4800046EF6 /* SecondViewController.swift in Sources */,
 				2D974D362089C9C200046EF6 /* ViewController.swift in Sources */,
+				2DA336A92097810F00C2EDC2 /* TapGestureViewController.swift in Sources */,
 				2D974D482089D4DB00046EF6 /* ImageViewController.swift in Sources */,
+				2DD6BC9920977C4400EF0F8A /* DateViewController.swift in Sources */,
 				2D974D342089C9C200046EF6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
