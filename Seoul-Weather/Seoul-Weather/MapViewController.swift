@@ -121,6 +121,7 @@ extension MapViewController: MTMapViewDelegate {
         daumView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         daumView.delegate = self
         daumView.baseMapType = .standard
+        daumView.useHDMapTile = false
         daumView.setZoomLevel(6, animated: false)
         view.addSubview(daumView)
     }
@@ -172,18 +173,20 @@ extension MapViewController: MTMapViewDelegate {
     
     private func updateMarkerState() {
         
-        for point in daumView.poiItems {
+        guard let points = daumView.poiItems else { return }
+        daumView.removeAllPOIItems()
+        
+        for point in points {
             guard let point: MTMapPOIItem = point as? MTMapPOIItem else {
                 return
             }
-            daumView.remove(point)
 
             let state = Int(arc4random_uniform(5))
             let name = getMarkerStateName(num: state)
             let image = UIImage(named: "small_"+name)
             point.customImage = image
-            daumView.add(point)
         }
+        daumView.addPOIItems(points)
         
     }
     
