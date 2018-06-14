@@ -177,7 +177,7 @@ extension MapViewController: MTMapViewDelegate {
                 return
             }
             daumView.remove(point)
-            
+
             let state = Int(arc4random_uniform(5))
             let name = getMarkerStateName(num: state)
             let image = UIImage(named: "small_"+name)
