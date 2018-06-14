@@ -64,8 +64,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fd5-OZ-57C">
-                                <rect key="frame" x="11" y="30" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fd5-OZ-57C">
+                                <rect key="frame" x="16" y="30" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="bDQ-EF-GM6"/>
                                     <constraint firstAttribute="width" constant="50" id="bVh-8a-qaw"/>
@@ -94,6 +94,9 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                                         <state key="normal" image="checkbox_off"/>
                                                         <state key="highlighted" image="checkbox_on"/>
+                                                        <connections>
+                                                            <action selector="touchUpButton:" destination="3XR-2x-s3W" eventType="touchUpInside" id="UOi-C4-muq"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대기환경지수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpy-r5-fjv">
                                                         <rect key="frame" x="52" y="0.0" width="88.5" height="44"/>
@@ -192,7 +195,7 @@
                         <viewLayoutGuide key="safeArea" id="qO7-4b-Fxs"/>
                     </view>
                     <connections>
-                        <outlet property="svgView" destination="02g-DI-5Gi" id="zKw-ev-X0d"/>
+                        <outlet property="uiMapView" destination="02g-DI-5Gi" id="7Wc-dv-cF9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0S-xg-fiu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -207,6 +210,6 @@
         <image name="label02" width="546" height="54"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ydj-zQ-oiv"/>
+        <segue reference="pJI-sF-3Zn"/>
     </inferredMetricsTieBreakers>
 </document>
