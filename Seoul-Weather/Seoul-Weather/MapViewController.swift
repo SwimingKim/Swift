@@ -19,18 +19,27 @@ class MapViewController: UIViewController {
     let wkwebView = WKWebView()
     let daumView = MTMapView()
     
-    @IBOutlet weak var uiMapView = UIView()
-    
-    @IBAction func touchUpButton(_ sender: UIButton) {
+    @IBOutlet weak var uiMapView: UIView!
+    @IBOutlet weak var firstDustButton: UIButton!
+    @IBOutlet weak var secondDustButton: UIButton!
+    @IBOutlet weak var thirdDustButton: UIButton!
+    @IBOutlet weak var forthDustButton: UIButton!
+
+    @IBAction func touchUpDustButton(_ sender: UIButton) {
+        firstDustButton.isSelected = firstDustButton == sender
+        secondDustButton.isSelected = secondDustButton == sender
+        thirdDustButton.isSelected = thirdDustButton == sender
+        forthDustButton.isSelected = forthDustButton == sender
         updateMapState()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         if choiceMap == MapType.DaumType {
             addGuMarkers()
         }
+        firstDustButton.isSelected = true
     }
     
     public func loadMapView(identifier: String?) {
@@ -79,6 +88,7 @@ extension MapViewController: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         view.addSubview(wkwebView)
+        touchUpDustButton(firstDustButton)
     }
     
     private func loadSVGMap(type: String) {
@@ -115,6 +125,8 @@ extension MapViewController: MTMapViewDelegate {
         if let svgframe = uiMapView?.frame {
             daumView.frame = svgframe
         }
+        
+        touchUpDustButton(firstDustButton)
     }
     
     private func loadDaumMap() {

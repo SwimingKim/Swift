@@ -87,69 +87,78 @@
                                 <rect key="frame" x="16" y="140" width="343" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0VY-mN-qZx">
-                                        <rect key="frame" x="0.0" y="0.0" width="519" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="527" height="60"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hgH-yS-d6X">
-                                                <rect key="frame" x="0.0" y="8" width="140.5" height="44"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hgH-yS-d6X">
+                                                <rect key="frame" x="0.0" y="8" width="142.5" height="44"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lA1-7X-kWb">
                                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                                         <state key="normal" image="checkbox_off"/>
-                                                        <state key="highlighted" image="checkbox_on"/>
+                                                        <state key="selected" image="checkbox_on"/>
                                                         <connections>
-                                                            <action selector="touchUpButton:" destination="3XR-2x-s3W" eventType="touchUpInside" id="UOi-C4-muq"/>
+                                                            <action selector="touchUpDustButton:" destination="3XR-2x-s3W" eventType="touchUpInside" id="9nm-Jp-MOp"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대기환경지수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpy-r5-fjv">
-                                                        <rect key="frame" x="52" y="0.0" width="88.5" height="44"/>
+                                                        <rect key="frame" x="54" y="0.0" width="88.5" height="44"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jfK-r0-CFb">
-                                                <rect key="frame" x="160.5" y="8" width="111" height="44"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jfK-r0-CFb">
+                                                <rect key="frame" x="162.5" y="8" width="113" height="44"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzj-rx-XLC">
                                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                                         <state key="normal" image="checkbox_off"/>
-                                                        <state key="highlighted" image="checkbox_on"/>
+                                                        <state key="selected" image="checkbox_on"/>
+                                                        <connections>
+                                                            <action selector="touchUpDustButton:" destination="3XR-2x-s3W" eventType="touchUpInside" id="9o1-CL-eT9"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="미세먼지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncf-td-76S">
-                                                        <rect key="frame" x="52" y="0.0" width="59" height="44"/>
+                                                        <rect key="frame" x="54" y="0.0" width="59" height="44"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qhe-UR-RTE">
-                                                <rect key="frame" x="291.5" y="8" width="126" height="44"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qhe-UR-RTE">
+                                                <rect key="frame" x="295.5" y="8" width="128" height="44"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p09-L3-u0k">
                                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                                         <state key="normal" image="checkbox_off"/>
-                                                        <state key="highlighted" image="checkbox_on"/>
+                                                        <state key="selected" image="checkbox_on"/>
+                                                        <connections>
+                                                            <action selector="touchUpDustButton:" destination="3XR-2x-s3W" eventType="touchUpInside" id="S9K-j7-7Fs"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="초미세먼지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGw-LN-dTK">
-                                                        <rect key="frame" x="52" y="0.0" width="74" height="44"/>
+                                                        <rect key="frame" x="54" y="0.0" width="74" height="44"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IyQ-6m-8Cc">
-                                                <rect key="frame" x="437.5" y="8" width="81.5" height="44"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IyQ-6m-8Cc">
+                                                <rect key="frame" x="443.5" y="8" width="83.5" height="44"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkA-GK-XQB">
                                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                                         <state key="normal" image="checkbox_off"/>
-                                                        <state key="highlighted" image="checkbox_on"/>
+                                                        <state key="selected" image="checkbox_on"/>
+                                                        <connections>
+                                                            <action selector="touchUpDustButton:" destination="3XR-2x-s3W" eventType="touchUpInside" id="WWo-27-fJk"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오존" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="he7-30-IvB">
-                                                        <rect key="frame" x="52" y="0.0" width="29.5" height="44"/>
+                                                        <rect key="frame" x="54" y="0.0" width="29.5" height="44"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -197,6 +206,10 @@
                         <viewLayoutGuide key="safeArea" id="qO7-4b-Fxs"/>
                     </view>
                     <connections>
+                        <outlet property="firstDustButton" destination="lA1-7X-kWb" id="LZs-IM-c3Z"/>
+                        <outlet property="forthDustButton" destination="pkA-GK-XQB" id="MoK-mY-cWI"/>
+                        <outlet property="secondDustButton" destination="rzj-rx-XLC" id="Adr-1V-mTd"/>
+                        <outlet property="thirdDustButton" destination="p09-L3-u0k" id="BlB-Vs-geg"/>
                         <outlet property="uiMapView" destination="02g-DI-5Gi" id="7Wc-dv-cF9"/>
                     </connections>
                 </viewController>
