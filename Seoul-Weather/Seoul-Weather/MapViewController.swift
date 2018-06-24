@@ -133,7 +133,6 @@ extension MapViewController: MTMapViewDelegate {
         daumView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         daumView.delegate = self
         daumView.baseMapType = .standard
-        daumView.useHDMapTile = false
         daumView.setZoomLevel(6, animated: false)
         view.addSubview(daumView)
     }

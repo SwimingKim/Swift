@@ -499,7 +499,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5JVHC5M949;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Seoul-Weather",
@@ -508,12 +509,12 @@
 					"$(PROJECT_DIR)/Seoul-Weather/DaumMap.embeddedframework",
 				);
 				INFOPLIST_FILE = "Seoul-Weather/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "kr.co.daon.mobile.Seoul-Weather";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.devsu.seoul.map;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Seoul-Weather/Seoul-Weather-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -529,7 +530,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5JVHC5M949;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Seoul-Weather",
@@ -538,12 +540,12 @@
 					"$(PROJECT_DIR)/Seoul-Weather/DaumMap.embeddedframework",
 				);
 				INFOPLIST_FILE = "Seoul-Weather/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "kr.co.daon.mobile.Seoul-Weather";
+				PRODUCT_BUNDLE_IDENTIFIER = kr.devsu.seoul.map;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Seoul-Weather/Seoul-Weather-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
